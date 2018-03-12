@@ -1,0 +1,17 @@
+{
+  "id" : "e7b9403e-335b-4bbc-afb7-b78af84ce4dd",
+  "name" : "service100",
+  "request" : {
+    "url" : "/service100/9",
+    "method" : "PATCH"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "\nBody content for stub 9\n\n",
+    "headers" : { }
+  },
+  "uuid" : "e7b9403e-335b-4bbc-afb7-b78af84ce4dd",
+  "persistent" : true,
+  "priority" : 5,
+  "insertionIndex" : 8
+}

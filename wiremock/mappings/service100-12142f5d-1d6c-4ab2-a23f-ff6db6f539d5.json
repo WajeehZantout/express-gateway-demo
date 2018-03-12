@@ -1,0 +1,20 @@
+{
+  "id": "12142f5d-1d6c-4ab2-a23f-ff6db6f539d5",
+  "request": {
+    "url": "/service100",
+    "method": "POST",
+    "headers": {
+      "Accept": {
+        "contains": "application/json"
+      }
+    }
+  },
+  "response": {
+    "status": 201,
+    "headers": {
+      "Content-Type": "application/json; charset=UTF-8"
+    }
+  },
+  "uuid": "12142f5d-1d6c-4ab2-a23f-ff6db6f539d5",
+  "insertionIndex": 2
+}

@@ -1,0 +1,20 @@
+{
+  "id": "cac71130-0aa7-4c24-9de4-62a96983991a",
+  "request": {
+    "urlPathPattern": "/service100/([a-zA-Z0-9-_]*)",
+    "method": "PUT",
+    "headers": {
+      "Accept": {
+        "contains": "application/json"
+      }
+    }
+  },
+  "response": {
+    "status": 204,
+    "headers": {
+      "Content-Type": "application/json; charset=UTF-8"
+    }
+  },
+  "uuid": "cac71130-0aa7-4c24-9de4-62a96983991a",
+  "insertionIndex": 1
+}

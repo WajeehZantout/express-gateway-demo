@@ -1,0 +1,21 @@
+{
+  "id": "c832ae74-485d-47d6-a72d-ff30ec404225",
+  "request": {
+    "urlPathPattern": "/service100/([a-zA-Z0-9-_]*)",
+    "method": "GET",
+    "headers": {
+      "Accept": {
+        "contains": "application/json"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "body": "{\"id\": 1, \"value\": \"things\"}",
+    "headers": {
+      "Content-Type": "application/json; charset=UTF-8"
+    }
+  },
+  "uuid": "c832ae74-485d-47d6-a72d-ff30ec404225",
+  "insertionIndex": 0
+}
