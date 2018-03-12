@@ -1,12 +1,15 @@
 http:
-  port: 8080
+  port: 3000
 admin:
   port: 9876
   hostname: localhost
 apiEndpoints:
-  # see: http://www.express-gateway.io/docs/configuration/gateway.config.yml/apiEndpoints
+  service:
+    host: localhost
+    paths: ['/service','/service/*']
 serviceEndpoints:
-  # see: http://www.express-gateway.io/docs/configuration/gateway.config.yml/serviceEndpoints
+  wiremock:
+    url: 'http://localhost:9999'
 policies:
   - basic-auth
   - cors
@@ -16,5 +19,20 @@ policies:
   - oauth2
   - proxy
   - rate-limit
+  - rewrite
 pipelines:
-  # see: https://www.express-gateway.io/docs/configuration/gateway.config.yml/pipelines
+  default:
+    apiEndpoints:
+      - service
+    policies:
+      - rewrite:
+          - condition:
+              name: regexpmatch
+              match: ^/service/(.*)$
+            action:
+              rewrite: /service100/$1
+      - proxy:
+          - action:
+              serviceEndpoint: wiremock 
+              changeOrigin: true
+
